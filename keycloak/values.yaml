@@ -1,0 +1,16 @@
+keycloak:
+  global:
+    defaultStorageClass: uid-1001-sc
+     
+  ingress:
+    enabled: true
+    hostname: keycloak.837925920403.realhandsonlabs.net
+    ingressClassName: alb
+    pathType: Prefix
+    annotations:
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/group.name: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+      alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
+
+  proxy: "edge"
