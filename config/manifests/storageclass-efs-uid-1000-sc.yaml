@@ -1,0 +1,17 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    storageclass.kubernetes.io/is-default-class: "true"
+  name: efs-uid-1000-sc
+parameters:
+  directoryPerms: "700"
+  fileSystemId: fs-0cc4ac369b4868fca
+  provisioningMode: efs-ap
+  directoryPerms: "700"
+  gid: "1000"
+  uid: "1000"
+allowVolumeExpansion: true
+provisioner: efs.csi.aws.com
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
