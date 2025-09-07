@@ -1,6 +1,6 @@
 keycloak:
   global:
-    defaultStorageClass: uid-1001-sc
+    defaultStorageClass: efs-uid-1001-sc
      
   ingress:
     enabled: true
