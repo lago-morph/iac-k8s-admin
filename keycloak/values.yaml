@@ -1,10 +1,9 @@
 keycloak:
   global:
-    defaultStorageClass: efs-uid-1001-sc
+    defaultStorageClass: uid-1001-sc
      
   ingress:
     enabled: true
-    hostname: keycloak.837925920403.realhandsonlabs.net
     ingressClassName: alb
     pathType: Prefix
     annotations:
