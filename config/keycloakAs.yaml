@@ -25,13 +25,13 @@ spec:
         server: '{{ .server }}'
         namespace: keycloak
       syncPolicy:
-#        automated:
-#          prune: true
-#          selfHeal: true
-#          allowEmpty: false
+        automated:
+          prune: true
+          selfHeal: true
+          allowEmpty: false
         syncOptions:
           - CreateNamespace=true
-#          - PrunePropagationPolicy=foreground
-#          - PruneLast=true
+          - PrunePropagationPolicy=foreground
+          - PruneLast=true
           - RespectIgnoreDifferences=true
           - ApplyOutOfSyncOnly=true
